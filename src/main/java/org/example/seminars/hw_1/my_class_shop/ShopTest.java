@@ -1,4 +1,4 @@
-package org.example.seminars.Shop;
+package org.example.seminars.hw_1.my_class_shop;
 
 public class ShopTest {
 

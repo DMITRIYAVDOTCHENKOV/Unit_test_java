@@ -1,5 +1,6 @@
-package org.example.seminars.Shop;
+package org.example.seminars.hw_1.reference_solution;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Shop {
@@ -15,15 +16,13 @@ public class Shop {
     }
 
     // Метод должен вернуть отсортированный по возрастанию по цене список продуктов
-    public List<Product> sortProductsByPrice() {
-        // Допишите реализацию метода самостоятельно
-        return null;
+    public List<Product> getSortedListProducts() {
+        Collections.sort(products);
+        return products;
     }
 
     // Метод должен вернуть самый дорогой продукт
     public Product getMostExpensiveProduct() {
-        // Допишите реализацию метода самостоятельно
-        return null;
+        return getSortedListProducts().get(products.size()-1);
     }
-
 }

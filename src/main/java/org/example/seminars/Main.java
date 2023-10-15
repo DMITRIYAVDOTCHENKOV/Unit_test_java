@@ -10,21 +10,22 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+
 public class Main {
     public static void main(String[] args) {
         // Проверьте, как работают методы:
 
-        // assertConditionA();
+//         assertConditionA();
 
         // assertConditionB();
 
-        // System.out.println(sum(2_147_483_647, 1));
+//        System.out.println(sum(2_147_483_647, 1));
 
         // happyNY();
 
-        // expectedValue();
+//         checkingShoppingCart();
+//         expectedValue();
 
-        // checkingShoppingCart()
 
         /*
                 assertThat(colors)
@@ -38,11 +39,10 @@ public class Main {
                         .doesNotContain("red", "black");    //Массив не должен содержать цвета: "red", "black"
         */
 
-        //  String[] colors = {};
+//          String[] colors = {"aqua","orange","yellow","blue", "green","violet", "gold" };
+//          testingJavaCollectionsAssertJ(colors);
 
-        //  testingJavaCollectionsAssertJ(colors);
-
-        //  checkingHero();
+          checkingHero();
     }
 
     //                  Практические задания:
@@ -63,7 +63,19 @@ public class Main {
     // assert boolean_выражение : сообщение_об_ошибке;
     // Ariane V - https://habr.com/ru/company/pvs-studio/blog/306748/
     // sum(2_147_483_647, 1) возвращает "-2147483648"
+
+    /**
+     * 3) Нужно, используя данную функцию, попробовать сложить два следующих числа
+     * 2_147_483_647 и 1, написать assert если нужно
+     * (https://habr.com/ru/company/pvs-studio/blog/306748/)
+     *
+     * @param a первое число
+     * @param b второе число
+     * @return сумму переданных чисел
+     * @apiNote assert boolean_выражение : сообщение_об_ошибке;
+     */
     public static int sum(int a, int b) {
+        assert (long) a + (long) b < Integer.MAX_VALUE : "Ошбика значения , вышли за пределы int ";
         return a + b;
     }
 
@@ -87,6 +99,7 @@ public class Main {
         productCategories.add("fruits");
         productCategories.add("vegetables");
         productCategories.add("bakery");
+        productCategories.add("drink");
 
         ArrayList<String> products = new ArrayList<>();
         products.add("apple");
@@ -101,6 +114,8 @@ public class Main {
                 System.out.println("category: " + productCategories.get(1));
             } else if (product.equals("bread")) {
                 System.out.println("category: " + productCategories.get(2));
+            } else if (product.equals("water")) {
+                System.out.println("category: " + productCategories.get(3));
             } else {
                 assert false : "Unknown category for the product " + product;
             }
@@ -112,7 +127,7 @@ public class Main {
     // ok - assertThat(actual/фактическое).isEqualTo(expected/ожидаемое);
     // not ok - assertThat(expected/ожидаемое).isEqualTo(actual/фактическое);
     public static void expectedValue() {
-        assertThat(5).isEqualTo(sum(2, 3));
+        assertThat(sum(2, 3)).isEqualTo(3);
     }
 
     // 1.7
@@ -132,19 +147,28 @@ public class Main {
     public static void checkingHero() {
 
         List<String> heroBag = Arrays.asList("Bow", "Axe", "Gold");
-        Hero emmett = new Hero("Emmett", 50, "sword", heroBag, true);
+        Hero emmett = new Hero("Emmett", 50, "sword", heroBag, false);
 
-        /*
-        1. Проверить, что герой создался с именем Emmett
-        2. Проверить, что значение прочности брони героя равно 50
-        3. Проверить, что у героя оружие типа sword
-        4. Проверить содержимое инвентаря героя (не пустой, размер 3, содержимое "Bow", "Axe", "Gold", порядок не важен)
-        5. Проверить, что герой человек (свойство true)
-        */
+/*
+1. Проверить, что герой создался с именем Emmett
+2. Проверить, что значение прочности брони героя равно 50
+3. Проверить, что у героя оружие типа sword
+4. Проверить содержимое инвентаря героя (не пустой, размер 3, содержимое "Bow", "Axe", "Gold", порядок не важен)
+5. Проверить, что герой человек (свойство true)
+*/
 
-        // assert "Emmett".equals(emmett.getName()): "Name should be Emmett";
-        // Далее продолжите сами ...
+// assert "Emmett".equals(emmett.getName()): "Name should be Emmett";
+// Далее продолжите сами ...
 
+        assertThat(emmett.getName()).isEqualTo("Emmett").isNotEmpty().hasSize(6);
+
+        assertThat(emmett.getArmorStrength()).isEqualTo(50);
+
+        assertThat(emmett.getWeapon()).isEqualTo("sword");
+
+//        assertThat(emmett.getBag()).isNotNull().hasSize(3).contains("Bow", "Axe", "Gold");
+
+        assertThat(emmett.isHuman()).isTrue();
     }
 
     // 1.8 (Черный ящик)
