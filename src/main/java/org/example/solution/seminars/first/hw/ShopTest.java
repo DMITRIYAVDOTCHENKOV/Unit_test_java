@@ -1,8 +1,8 @@
-package org.example.seminars.hw_1.reference_solution;
+package org.example.solution.seminars.first.hw;
 
 import java.util.*;
 
-;import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 public class ShopTest {
     /*
