@@ -3,6 +3,11 @@ package org.seminars.first;
 
 import org.seminars.first.model.Calculator;
 
+
+
+;import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 public class CalculatorTestDep {
 
     public static void main(String[] args) {

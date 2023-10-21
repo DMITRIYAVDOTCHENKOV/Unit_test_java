@@ -6,6 +6,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class ShopTest {
     /*
      1. Проверить, что магазин хранит верный список продуктов (количество продуктов)
