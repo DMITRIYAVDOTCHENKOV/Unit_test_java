@@ -1,8 +1,10 @@
-package org.example.solution.seminars.first.hw;
+package org.seminars.first.hw;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ShopTest {
     /*
@@ -28,26 +30,6 @@ public class ShopTest {
         assertThat(testShop.getSortedListProducts().get(1).getCost()).isEqualTo(150);
         assertThat(testShop.getSortedListProducts().get(2).getCost()).isEqualTo(299);
         assertThat(testShop.getSortedListProducts().get(3).getCost()).isEqualTo(500);
-
-        //  for (Product product : getTestListProducts()) {
-        //      System.out.println(product.getTitle() +" - "  + product.getCost());
-        //  }
-
-//        System.out.println("До сортировки:");
-//        for (Product product : getTestListProducts()) {
-//            System.out.println(product.getTitle() + " - " + product.getCost());
-//        }
-//
-//        System.out.println("После Перемешивания:");
-//        for (Product product : getShuffleListProducts(getTestListProducts())) {
-//            System.out.println(product.getTitle() + " - " + product.getCost());
-//        }
-//
-//        System.out.println("После сортировки:");
-//        for (Product product : testShop.getSortedListProducts()) {
-//            System.out.println(product.getTitle() + " - " + product.getCost());
-//        }
-
     }
 
     static List<Product> getTestListProducts() {

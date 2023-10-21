@@ -1,4 +1,4 @@
-package org.example.solution.seminars.first.model;
+package org.seminars.first.model;
 
 import java.util.Scanner;
 

@@ -1,14 +1,39 @@
-package org.example.solution.seminars.second.simple_shopping_cart;
+package org.seminars.second;
+
+
+
+
+import org.seminars.second.model.Product;
+import org.seminars.second.model.Shop;
+import org.seminars.second.model.TextUserInterface;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+
 public class Main {
     public static void main(String[] args) {
-        Shop shop = new Shop(getStoreItems());
+        Shop shop = new Shop(Collections.singletonList((org.seminars.second.model.Product) getStoreItems()));
         new TextUserInterface(shop);
     }
 
     // Создаем набор продуктов для магазина:
+    /*
+    ID | Название            | Цена, р. | Кол-во в магазине, шт.
+    1  | bacon               | 170.0    | 10
+    2  | beef                | 250.0    | 10
+    3  | ham                 | 200.0    | 10
+    4  | salmon              | 150.0    | 10
+    5  | carrot              | 15.0     | 10
+    6  | potato              | 30.0     | 10
+    7  | onion               | 20.0     | 10
+    8  | apple               | 59.0     | 70
+    9  | melon               | 88.0     | 13
+    10 | rice                | 100.0    | 30
+    11 | eggs                | 80.0     | 40
+    12 | yogurt              | 55.0     | 60
+     */
     public static List<Product> getStoreItems() {
         List<Product> products = new ArrayList<>();
 

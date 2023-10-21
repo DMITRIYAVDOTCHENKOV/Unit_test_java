@@ -1,4 +1,5 @@
-package org.example.solution.seminars.second.simple_shopping_cart;
+package org.seminars.second.model;
+
 
 import java.util.List;
 import java.util.Scanner;

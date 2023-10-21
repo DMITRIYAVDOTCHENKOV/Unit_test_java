@@ -1,13 +1,7 @@
-package org.example.solution.seminars.first;
+package org.seminars.first;
 
 
-
-
-
-import org.example.solution.seminars.first.model.Calculator;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.assertj.core.api.Assertions.assertThat;
+import org.seminars.first.model.Calculator;
 
 public class CalculatorTestDep {
 

@@ -1,4 +1,4 @@
-package org.example.solution.seminars.second.hw;
+package org.seminars.second.hw;
 
 public abstract class Vehicle {
     private String company;

@@ -1,4 +1,4 @@
-package org.example.solution.seminars.first.hw;
+package org.seminars.first.hw;
 
 import java.util.Collections;
 import java.util.List;
@@ -6,7 +6,6 @@ import java.util.List;
 public class Shop {
     private List<Product> products;
 
-    // Геттеры, сеттеры:
     public List<Product> getProducts() {
         return products;
     }
@@ -15,14 +14,18 @@ public class Shop {
         this.products = products;
     }
 
-    // Метод должен вернуть отсортированный по возрастанию по цене список продуктов
+    /**
+     * @return отсортированный по возрастанию и цене список продуктов
+     */
     public List<Product> getSortedListProducts() {
         Collections.sort(products);
         return products;
     }
 
-    // Метод должен вернуть самый дорогой продукт
+    /**
+     * @return самый дорогой продукт
+     */
     public Product getMostExpensiveProduct() {
-        return getSortedListProducts().get(products.size()-1);
+        return getSortedListProducts().get(products.size() - 1);
     }
 }

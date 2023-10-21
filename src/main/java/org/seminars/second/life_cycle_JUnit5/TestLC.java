@@ -1,11 +1,6 @@
-package org.example.solution.seminars.second.life_cycle_JUnit5;
+package org.seminars.second.life_cycle_JUnit5;
 
-
-import org.junit.Test;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 
 public class TestLC {
     @BeforeAll
