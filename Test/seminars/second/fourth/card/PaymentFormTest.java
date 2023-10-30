@@ -6,6 +6,7 @@ import org.seminars.fourth.card.PaymentForm;
 
 import static org.mockito.Mockito.*;
 
+
 class PaymentFormTest {
 
     /**
