@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class ShopTest {
 
     // Создаем набор продуктов для магазина:
