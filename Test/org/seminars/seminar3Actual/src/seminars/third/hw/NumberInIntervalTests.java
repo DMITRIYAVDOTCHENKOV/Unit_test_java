@@ -1,8 +1,6 @@
 package org.seminars.seminar3Actual.src.seminars.third.hw;
 
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertTrue;
